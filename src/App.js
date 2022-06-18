@@ -6,7 +6,7 @@ import ProductDetails from "./components/ProductDetails";
 function App() {
   return (
     <Router>
-      <div className="">
+      <div className="dark:bg-slate-900">
         <Header />
         <Routes>
           <Route path="/" element={<Products />} />

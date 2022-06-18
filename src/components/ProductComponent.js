@@ -10,13 +10,13 @@ function ProductComponent() {
     return (
       <div className=" w-1/4 " key={id}>
         <Link to={`product/${id}`}>
-          <div className="flex flex-col p-5 m-4 border-2 rounded-md border-gray-500 border-solid bg-white justify-between">
+          <div className="flex flex-col p-5 m-4 border-2 rounded-md border-gray-500 border-solid bg-white justify-between ">
             <div className="flex h-4/5">
               <img className="h-72" src={image} alt={title} />
             </div>
             {/* <div className=""></div> */}
             <div className="h-1/4 flex flex-col content-start">
-              <div className="font-bold text-sm self-start border-t border-black w-full h-2/4">
+              <div className="font-bold text-sm self-start border-t border-black w-full h-2/4 line-clamp-1 pt-2">
                 {title}
               </div>
               <div className="h-2/4">
