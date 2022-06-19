@@ -18,7 +18,7 @@ function Header() {
         <Link to="/">FAKE STORE</Link>
       </div>
       <div className="" onClick={handleClick}>
-        {light ? <BsMoonFill color="grey" /> : <BsSunFill color="grey" />}
+        {light ? <BsMoonFill color="grey" className="h-5 w-5"/> : <BsSunFill color="grey" className="h-5 w-5" />}
       </div>
     </div>
   );

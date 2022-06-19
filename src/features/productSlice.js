@@ -11,28 +11,9 @@ export const productSlice = createSlice({
       state.products = [...action.payload];
       // return { ...state, products: action.payload };
     },
-    selectedProduct: (state, action) => {
-      return { products: [...state.products, action.payload] };
-
-      // state.products.push(action.payload);
-
-      // return { products: [...state, ...action.payload] };
-    },
   },
 });
 
-export const getProductSlice = createSlice({
-  name: "singleProduct",
-  initialState: {},
-  reducers: {
-    getProduct: (state, action) => {
-      // return [...state, ...action.payload];
-       return [...action.payload];
-    },
-  },
-});
-
-export const { setProducts, selectedProduct } = productSlice.actions;
-export const { getProduct } = getProductSlice.actions;
+export const { setProducts } = productSlice.actions;
 
 export default productSlice.reducer;

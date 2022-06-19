@@ -8,11 +8,11 @@ function ProductComponent() {
     const { id, title, image, price, category } = product;
 
     return (
-      <div className=" w-1/4 " key={id}>
+      <div className=" w-1/2 md:w-1/4 h-full " key={id}>
         <Link to={`product/${id}`}>
-          <div className="flex flex-col p-5 m-4 border-2 rounded-md border-gray-500 border-solid bg-white justify-between ">
-            <div className="flex h-4/5">
-              <img className="h-72" src={image} alt={title} />
+          <div className="flex flex-col p-5 m-2 md:m-4 border-2 rounded-md border-gray-500 border-solid bg-white justify-between ">
+            <div className="flex h-4/5 justify-center">
+              <img className="md:h-72 h-36 pb-2" src={image} alt={title} />
             </div>
             {/* <div className=""></div> */}
             <div className="h-1/4 flex flex-col content-start">
@@ -32,7 +32,7 @@ function ProductComponent() {
     );
   });
 
-  return <div className="mt-2 flex flex-wrap  px-11 ">{productList}</div>;
+  return <div className="mt-2 flex flex-wrap  md:px-11 ">{productList}</div>;
 }
 
 export default ProductComponent;
