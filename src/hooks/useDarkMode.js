@@ -1,17 +1,32 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, createContext, useReducer } from "react";
 
-function useDarkMode() {
-  const [theme, setTheme] = useState("light");
-  const colorTheme = theme === "light" ? "dark" : "light";
+// const INITIAL_STATE = {
+//   lightMode: localStorage.getItem("theme") || "light",
+// };
 
-  useEffect(() => {
-    const root = window.document.documentElement;
+// export const LightModeContext = createContext(INITIAL_STATE);
 
-    root.classList.add(theme);
-    root.classList.remove(colorTheme);
-  }, [setTheme, colorTheme]);
+// const LightModeReducer = (state, action) => {
+//   switch (action.type) {
+//     case "TOGGLE":
+//       return {
+//         lightMode: state.lightMode === "light" ? "dark" : "light",
+//       };
+//     default:
+//       return state;
+//   }
+// };
 
-  return [setTheme, colorTheme];
-}
+// export const LightModeContextProvider = ({ children }) => {
+//   const [state, dispatch] = useReducer(LightModeReducer, INITIAL_STATE);
 
-export default useDarkMode;
+//   useEffect(() => {
+//     localStorage.setItem("theme", state.lightMode);
+//   }, [state.lightMode]);
+
+//   return (
+//     <LightModeContext.Provider value={{ lightMode: state.lightMode, dispatch }}>
+//       {children}
+//     </LightModeContext.Provider>
+//   );
+// };

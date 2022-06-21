@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductComponent from "./ProductComponent";
 import axios from "axios";
 import { setProducts } from "../features/productSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function Products() {
   //   const prod = useSelector((state) => state);
