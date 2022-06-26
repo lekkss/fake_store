@@ -4,15 +4,8 @@ import { BsSunFill } from "react-icons/bs";
 import { BsMoonFill } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../features/themeSlice";
-// import { LightModeContext } from "../hooks/useDarkMode";
 
 function Header() {
-  // const { lightMode, dispatch } = useContext(LightModeContext);
-  // const handleClick = () => {
-  //   dispatch({ type: "TOGGLE" });
-  //   //setTheme(colorTheme);
-  // };
-
   const theme = useSelector((state) => state.setTheme.theme);
   const dispatch = useDispatch();
   const handleClick = () => {

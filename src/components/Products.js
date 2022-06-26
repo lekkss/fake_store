@@ -5,7 +5,6 @@ import { setProducts } from "../features/productSlice";
 import { useDispatch } from "react-redux";
 
 function Products() {
-  //   const prod = useSelector((state) => state);
   const [loading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
@@ -23,7 +22,6 @@ function Products() {
     fetchProducts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  //   console.log("Products: ", prod);
   return (
     <div>
       {loading ? (
