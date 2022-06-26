@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BsSunFill } from "react-icons/bs";
 import { BsMoonFill } from "react-icons/bs";
@@ -8,6 +8,11 @@ import { setTheme } from "../features/themeSlice";
 function Header() {
   const theme = useSelector((state) => state.setTheme.theme);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   const handleClick = () => {
     console.log(theme);
     console.log("here");
